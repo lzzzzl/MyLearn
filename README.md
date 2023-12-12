@@ -1,1 +1,5 @@
 # MyLearn
+
+# TypeScript
+
+# JavaScript
