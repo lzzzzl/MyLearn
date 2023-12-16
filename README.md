@@ -2,7 +2,6 @@
 
 # TypeScript
 
-## TypeScript Tutorial
-[typescript tutorial](TypeScript/typescript-tutorial/chapter1/README.md)
-
-# JavaScript
+## 1. TypeScript Tutorial
+Chapter1
+Chapter2

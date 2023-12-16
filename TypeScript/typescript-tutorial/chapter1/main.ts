@@ -20,8 +20,8 @@ let obj = { message: '' };
 console.log(obj.messege); // 报错
 
 const a = 0;
-const b = true;
-const result = a + b; // 报错
+const b = true;·
+const result = a + b; // 报错··
 
 // 没有 find() 方法
 function hello() {
