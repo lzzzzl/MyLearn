@@ -44,3 +44,10 @@ const b2 = undefined; // undefined
 
 let c2 = null;        // null
 const d2 = null;      // null
+
+// 2. 包装对象类型
+"hello".charAt(1) // "e"
+
+const s2 = new String("hello");
+typeof s2 // "object"
+s2.charAt(1) // "e"
