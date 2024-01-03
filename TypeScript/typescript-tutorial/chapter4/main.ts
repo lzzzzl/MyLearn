@@ -31,23 +31,36 @@ let n1: null = null;
 
 // 关闭 noImplicitAny 和 strictNullChecks
 
-let a1 = undefined;   // any
+let a1 = undefined; // any
 const b1 = undefined; // any
 
-let c1 = null;        // any
-const d1 = null;      // any
+let c1 = null; // any
+const d1 = null; // any
 
 // 打开编译设置 strictNullChecks
 
-let a2 = undefined;   // undefined
+let a2 = undefined; // undefined
 const b2 = undefined; // undefined
 
-let c2 = null;        // null
-const d2 = null;      // null
+let c2 = null; // null
+const d2 = null; // null
 
 // 2. 包装对象类型
-"hello".charAt(1) // "e"
+"hello".charAt(1); // "e"
 
 const s2 = new String("hello");
-typeof s2 // "object"
-s2.charAt(1) // "e"
+typeof s2; // "object"
+s2.charAt(1); // "e"
+
+// 2.2 包装对象类型与字面量类型
+("hello"); // 字面量
+new String("hello"); // 包装对象
+
+const ss1:String = 'hello'; // 正确
+const ss2:String = new String('hello'); // 正确
+
+const ss3:string = 'hello'; // 正确
+const ss4:string = new String('hello'); // 报错
+
+
+
