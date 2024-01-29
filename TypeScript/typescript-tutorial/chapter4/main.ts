@@ -56,25 +56,45 @@ s2.charAt(1); // "e"
 ("hello"); // 字面量
 new String("hello"); // 包装对象
 
-const ss1:String = 'hello'; // 正确
-const ss2:String = new String('hello'); // 正确
+const ss1: String = "hello"; // 正确
+const ss2: String = new String("hello"); // 正确
 
-const ss3:string = 'hello'; // 正确
+const ss3: string = "hello"; // 正确
 // const ss4:string = new String('hello'); // 报错
-
 
 // 3. Object 类型与 object 类型
 // 3.1 Object 类型
 
-let obj:Object;
+let obj: Object;
 
 obj = true;
-obj = 'hi';
+obj = "hi";
 obj = 1;
 obj = { foo: 123 };
 obj = [1, 2];
-obj = (a:number) => a + 1;
-
+obj = (a: number) => a + 1;
 
 // obj = undefined; // 报错
 // obj = null; // 报错
+
+// obj 声明的另一种写法
+let obj4: {};
+
+// 3.2 object 类型
+let obj5: object;
+
+obj5 = { foo: 123 };
+obj5 = [1, 2];
+obj5 = (a: number) => a + 1;
+// obj5 = true // 报错
+// obj5 = "hi" // 报错
+// obj5 = 1 // 报错
+
+const o1: Object = { foo: 0 };
+const o2: object = { foo: 0 };
+
+o1.toString() // 正确
+// o1.foo() // 报错
+
+o2.toString() // 正确
+// o2.foo() // 报错
