@@ -93,8 +93,77 @@ obj5 = (a: number) => a + 1;
 const o1: Object = { foo: 0 };
 const o2: object = { foo: 0 };
 
-o1.toString() // 正确
+o1.toString(); // 正确
 // o1.foo() // 报错
 
-o2.toString() // 正确
+o2.toString(); // 正确
 // o2.foo() // 报错
+
+// 4. undefined 和 null 的特殊性
+let age: number = 24;
+
+// age = null; // 报错
+// age = undefined; // 报错
+
+// 5. 值类型
+let p1: 5 = 5;
+let p2: number = 4 + 1;
+
+// p1 = p2; // 报错
+p2 = p1; // 正确
+
+// 6. 联合类型
+
+let j1: string | number;
+
+j1 = 123;
+j1 = "abc";
+
+let setting: true | false;
+let gender: "male" | "female";
+let rainbowColor: "赤" | "橙" | "黄" | "绿" | "青" | "蓝" | "紫";
+
+function getPort(schema: "http" | "https") {
+  switch (schema) {
+    case "http":
+      return 80;
+    case "https":
+      return 443;
+  }
+}
+
+// 7. 交叉类型
+// 主要用途是用来表示对象的合成
+let obj10: { foo: string } & { bar: string };
+obj10 = { foo: "hello", bar: "world" };
+
+// 8. type 命令
+
+type World = "world";
+type Greeting = `hello ${World}`;
+
+// 9. typeof 运算符
+typeof undefined; // "undefined"
+typeof true; // "boolean"
+typeof 1337; // "number"
+typeof "foo"; // "string"
+typeof {}; // "object"
+typeof parseInt; // "function"
+typeof Symbol(); // "symbol"
+typeof 127n // "bigint"
+
+// 10. 块级类型声明
+if (true) {
+  type T = number;
+  let v:T = 5;
+} else {
+  type T = string;
+  let v:T = "hello";
+}
+
+// 11. 类型兼容
+
+type T = number | string;
+
+let a:number = 1;
+let b:T = a;
