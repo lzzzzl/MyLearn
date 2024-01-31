@@ -79,3 +79,28 @@ function fail(msg: string): never {
 function infiniteLoop(): never {
   while (true) {}
 }
+
+// 11. 局部类型
+function hello(txt:string) {
+  type message = string;
+  let newTxt:message = 'hello ' + txt;
+  return newTxt;
+}
+
+// const newTxt:message = hello('world');
+
+// 12. 高阶函数
+(someValue: number) => (multiplier: number) => someValue * multiplier;
+
+// 13. 函数重载
+function f(x:any):number;
+function f(x:string): 0|1;
+function f(x:any):any {
+  // ...
+}
+
+// 14. 构造函数
+
+// 构造函数的最大特点: 必须使用 new 命令
+const d = new Date();
+
