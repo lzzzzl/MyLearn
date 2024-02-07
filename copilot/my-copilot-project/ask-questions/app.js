@@ -6,3 +6,4 @@
 
 // q: Open/Closed Principle
 // a: Open/Closed Principle is the second principle of SOLID. It states that a class should be open for extension but closed for modification. This means that a class should be easily extendable without modifying the class itself.
+
